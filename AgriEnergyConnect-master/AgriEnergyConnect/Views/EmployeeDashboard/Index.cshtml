@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Employee Dashboard";
+}
+
+<style>
+    body {
+        background-color: #f8f9fa; 
+        font-family: Arial, sans-serif;
+    }
+
+    .dashboard-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+        .dashboard-container h2 {
+            margin-bottom: 30px;
+            color: #343a40; 
+        }
+
+    .btn-primary {
+        margin: 10px;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        background-color: #c66900;
+        border-color: #c66900; 
+        color: #ffffff; 
+    }
+
+        .btn-primary:hover {
+            background-color: #b35c00; 
+            border-color: #b35c00; 
+        }
+</style>
+
+<div class="dashboard-container">
+    <h2>@ViewData["Title"]</h2>
+
+    <div>
+        <a href="@Url.Action("RegisterFarmer", "EmployeeDashboard")" class="btn btn-primary">Add Farmer</a>
+        <a href="@Url.Action("Search", "EmployeeDashboard")" class="btn btn-primary">Search Products</a>
+    </div>
+</div>
